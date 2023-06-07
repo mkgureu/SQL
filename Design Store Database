@@ -1,0 +1,20 @@
+CREATE TABLE store 
+(id INTEGER PRIMARY KEY, item TEXT, price INTEGER);
+
+INSERT INTO store VALUES (1, "cami", 15);
+INSERT INTO store VALUES (2, "leotard", 14);
+INSERT INTO store VALUES (3, "shirt", 20);
+INSERT INTO store VALUES (4, "dress", 11);
+INSERT INTO store VALUES (5, "skirt", 25);
+INSERT INTO store VALUES (6, "leggings", 104);
+INSERT INTO store VALUES (7,"jeans", 93);
+INSERT INTO store VALUES (8, "chinos", 8);
+INSERT INTO store VALUES (9, "maxi skirt", 9);
+INSERT INTO store VALUES (10, "midi skirt", 35);
+INSERT INTO store VALUES (11, "jumper", 14);
+INSERT INTO store VALUES (12, "boots", 35);
+INSERT INTO store VALUES (13, "vest", 22);
+INSERT INTO store VALUES (14, "bra", 99);
+INSERT INTO store VALUES (15, "panties", 24);
+
+SELECT * FROM store WHERE price <20 ORDER BY price desc;
