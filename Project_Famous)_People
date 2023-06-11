@@ -1,0 +1,39 @@
+/* Create table about the people and what they do here */
+CREATE TABLE artist_birthplaces (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    artist_name TEXT,
+    birthplace TEXT
+    );
+    
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Michael Jackson', 'Gary, Indiana');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Queen', 'London, England');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Elvis Presley', 'Tupelo, Mississippi');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Madonna', 'Bay City, Michigan');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('The Beatles', 'Liverpool, England');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Whitney Houston', 'Newark, New Jersey');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Beyoncé', 'Houston, Texas');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Bob Dylan', 'Duluth, Minnesota');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Elton John', 'Pinner, Middlesex, England');
+INSERT INTO artist_birthplaces (artist_name, birthplace) VALUES ('Frank Sinatra', 'Hoboken, New Jersey');
+
+CREATE TABLE songs (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+artist_id INTEGER,
+artist_name TEXT,
+song_name TEXT
+);
+    
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (1, "Michael Jackson", "Thriller");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (2, "Queen", "Bohemian Rhapsody");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (3, "Elvis Presley", "Hound Dog");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (4, "Madonna", "Like a Virgin");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (5, "The Beatles", "Hey Jude");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (6, "Whitney Houston", "I Will Always Love You");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (7, "Beyoncé", "Single Ladies (Put a Ring on It)");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (8, "Bob Dylan", "Like a Rolling Stone");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (9, "Elton John", "Candle in the Wind");
+INSERT INTO songs (artist_id, artist_name, song_name) VALUES (10, "Frank Sinatra", "My Way");
+
+SELECT songs.artist_name, songs.song_name, artist_birthplaces.birthplace
+FROM songs
+JOIN artist_birthplaces ON songs.artist_id = artist_birthplaces.id;
