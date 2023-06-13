@@ -6,6 +6,10 @@ This is a Netflix Data Analytics Project that uses PostgreSQL to answer these Qu
 4) Who was the Director for the movie Bright Star?
 5) What is the oldest movie in the database and what year was it made?
 
+Here are the datasets I used to answer this: 
+
+https://docs.google.com/spreadsheets/d/1Ubzd0pYLUJKkfGf66kc8151CMg36mw-n5tVm4Gcpdgc/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1eGrjb0fUuxMpX05oKudJUn7yu7foUfq-4QVXpx80Q94/edit?usp=sharing
 
 
 1) SELECT count(*)
